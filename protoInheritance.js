@@ -27,6 +27,10 @@ function Vehicle(name,engine, wheels, weight) {
 
 function Car(name, engine,weight) {
 	// creates a Vehicle Object and then a new Obj that delegates to it
+	// QUESTION: This 'works' but technically I'm creating TWO objects,
+	//           A Vehicle one and a new Car one that delegates to it.
+	//           The 'size' of the two would be the same for classical inheritance,
+	//           but I don't know if this is a right way of thinking.
 	var newObj = Object.create(Vehicle(name, "diesel", 4, 100));
 	/*
 	newObj.name = name;
@@ -74,5 +78,8 @@ testGettersCar(myCar);
 changeProps.apply(myVehicle, ["New name","new fuel",300,400]);
 testGettersVehicle(myVehicle);
 
+// PROBLEM: setWheels is available on myCar
+//          I could redefine setWheels for Cars and making it doing nothing
+//          But it seems ugly and uncorrect.
 myCar.setWheels(5);
 console.log(myCar.getWheels());
