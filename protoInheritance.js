@@ -11,6 +11,7 @@ function Vehicle(name,engine, wheels, weight) {
 		getWeight: () => { return weight;},
 
 		setName: (newName) => {name = newName ;},
+		// Here I wanted to provide a check and default value
 		setWheels: (numWheels) => {wheels = (numWheels < 10 ? numWheels : 4);},
 		setWeight: (newWeight) => {weight = newWeight;},
 		setEngine: (newEngine) => {engine = newEngine;},
@@ -25,7 +26,7 @@ function Vehicle(name,engine, wheels, weight) {
 }
 
 
-function Car(name, engine,weight) {
+function Car(name,engine,weight) {
 	// creates a Vehicle Object and then a new Obj that delegates to it
 	// QUESTION: This 'works' but technically I'm creating TWO objects,
 	//           A Vehicle one and a new Car one that delegates to it.
@@ -62,6 +63,8 @@ function testGettersCar(obj) {
 	console.log("\n");
 }
 
+// I only wanted to test "apply()"
+// That's the only reason I use 'this' here
 function changeProps(name, engine, wheels, weight) {
 	this.setName(name);
 	this.setWeight(weight);
