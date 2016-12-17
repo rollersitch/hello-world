@@ -86,3 +86,4 @@ testGettersVehicle(myVehicle);
 //          But it seems ugly and uncorrect.
 myCar.setWheels(5);
 console.log(myCar.getWheels());
+
