@@ -1,6 +1,3 @@
-'use strict';
-'esversion: 6';
-
 function Vehicle(name,engine, wheels, weight) {
 	var  name = name;
 	var  engine = engine;
