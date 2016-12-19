@@ -6,8 +6,7 @@ var Seat = {
 	// Then it returns the object itself, to allow for chaining.
 	init: function(color) {
 		this.color = color;
-		this.shift = function(dir) { console.log("Seat " + this.color +
-												  " shifting " + dir);};
+		this.shift = function(dir) { console.log("Seat " + this.color + " shifting " + dir);};
 		return this;
 	},
 
