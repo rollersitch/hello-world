@@ -1,4 +1,3 @@
-
 // A seat object that will be part of Car object
 var Seat = {
 	// The pattern I use is always the same
